@@ -6,7 +6,7 @@ import functools
 
 import tools
 
-from mnist import mnist_data
+from tensorflow.examples.tutorials.mnist import input_data
 
 def doublewrap(function):
 	@functools.wraps(function)
@@ -157,7 +157,7 @@ class Cnn_Model:
 
 def main():
 	# Import data
-	mnist = mnist_data.read_data_sets('/tmp/tensorflow/mnist/input_data', one_hot=True)
+	mnist = input_data.read_data_sets('/tmp/tensorflow/mnist/input_data', one_hot=True)
 
 	# Construct graph
 	image = tf.placeholder(tf.float32, [None, 784])
