@@ -1,0 +1,25 @@
+import argparse
+import sys
+
+import tensorflow as tf
+import functools
+
+from tools import *
+from mnist import mnist_data
+
+# image parameters
+img_height = 28
+img_width = 28
+img_size = img_height * img_width
+
+# file system parameters
+output_path = "dcgan_output"
+
+# training parameters
+max_epoch = 250
+
+# conv hyperparameters
+conv_h = 5
+conv_w = 5
+
+
